@@ -44,7 +44,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
           buildBottomNavigationBarItem(Feather.briefcase, 'Work Experience'),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.indigo[300],
+        selectedItemColor: Colors.blueAccent,
         onTap: _onItemTapped,
       ),
     );

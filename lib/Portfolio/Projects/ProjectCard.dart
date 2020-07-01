@@ -16,7 +16,10 @@ class ProjectCard extends StatelessWidget {
         tag: projectCardData.projectTitle,
         child: Card(
           shadowColor: Colors.grey[900],
-          elevation: 15.0,
+          shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+        ),
+          elevation: 5.0,
           margin: const EdgeInsets.all(16.0),
           child: Padding(
             padding: const EdgeInsets.all(12.0),

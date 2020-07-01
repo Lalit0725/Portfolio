@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Portfolio/TextCard.dart';
 
 class Skills extends StatelessWidget {
   const Skills();
@@ -10,75 +11,90 @@ class Skills extends StatelessWidget {
       color: Colors.grey[300],
       child: ListView(
         children: <Widget>[
-          textCard(
-              Colors.white, 'Skills', FontStyle.normal, FontWeight.bold, 20),
+          TextCard(
+              color: Colors.white,
+              text: 'Skills',
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
           Center(
-              child: textCard(Colors.white, 'Unity', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'Unity',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'Unreal', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'Unreal',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'Flutter', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'Flutter',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'Photoshop', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'Photoshop',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'Illustrator', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'Illustrator',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'After Effects', FontStyle.normal,
-                  FontWeight.bold, 20)),
-          textCard(
-              Colors.white, 'Languages', FontStyle.normal, FontWeight.bold, 20),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'After Effects',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
+          TextCard(
+              color: Colors.white,
+              text: 'Languages',
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
           Center(
-              child: textCard(Colors.white, 'C#', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'C#',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'C++', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'C++',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'HTML & CSS', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'HTML & CSS',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(Colors.white, 'Dart', FontStyle.normal,
-                  FontWeight.bold, 20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text: 'Dart',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
         ],
       ),
-    );
-  }
-
-  Container textCard(Color color, String text, FontStyle fontStyle,
-      FontWeight fontWeight, double fontSize) {
-    return Container(
-      margin: const EdgeInsets.all(7.0),
-      padding: const EdgeInsets.all(7.0),
-      decoration: myBoxDecoration(color), //
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: fontSize,
-          fontStyle: fontStyle,
-          fontWeight: fontWeight,
-        ),
-      ),
-    );
-  }
-
-  BoxDecoration myBoxDecoration(Color color) {
-    return BoxDecoration(
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey[700],
-          blurRadius: 4.0,
-          spreadRadius: 1.0,
-        )
-      ],
-      color: color,
-      border: Border.symmetric(
-          vertical: BorderSide(width: 2), horizontal: BorderSide(width: 3)),
     );
   }
 }

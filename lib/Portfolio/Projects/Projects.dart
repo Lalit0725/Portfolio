@@ -72,7 +72,7 @@ class _ProjectState extends State<Project> {
           'assets/CleanRiver/EndScreen.jpg',
         ]),
     ProjectCardData(
-        projectTitle: 'Blobby\'s Plight Rziver',
+        projectTitle: 'Blobby\'s Plight',
         projectDescription: 'Game Jam Game. A fun little platformer game.',
         projectImages: [
           'assets/BlobbysPlight/1.png',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Portfolio/TextCard.dart';
 
 class Works extends StatelessWidget {
   const Works();
@@ -10,82 +11,66 @@ class Works extends StatelessWidget {
       color: Colors.grey[300],
       child: ListView(
         children: <Widget>[
-          textCard(Colors.white, 'Professional info', FontStyle.normal,
-              FontWeight.bold, 20),
+          TextCard(
+              color: Colors.white,
+              text: 'Professional info',
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
           Center(
-              child: textCard(
-                  Colors.white,
-                  'Am a unity developer having intermediate knowledge in Gaming, Augment reality and Virtual reality. I love to explore  technologies and love to keep things updated.',
-                  FontStyle.normal,
-                  FontWeight.bold,
-                  20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text:
+                      'Am a unity developer having intermediate knowledge in Gaming, Augment reality and Virtual reality. I love to explore  technologies and love to keep things updated.',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(
-                  Colors.white,
-                  'Am currently learing Flutter a hybrid solution for the native apps.\n This app is developed in Flutter. ',
-                  FontStyle.normal,
-                  FontWeight.bold,
-                  20)),
-          textCard(Colors.white, 'Work Experience', FontStyle.normal,
-              FontWeight.bold, 20),
+              child: TextCard(
+                  color: Colors.white,
+                  text:
+                      'Am currently learing Flutter a hybrid solution for the native apps.\n This app is developed in Flutter. ',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
+          TextCard(
+              color: Colors.white,
+              text: 'Work Experience',
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
           Center(
-              child: textCard(
-                  Colors.white,
-                  'Internship at Flex India \n Unity Developer\n Worked in AR and VR apps. \n​July 2019 - September 2019 ',
-                  FontStyle.normal,
-                  FontWeight.bold,
-                  20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text:
+                      'Internship at Flex India \n Unity Developer\n Worked in AR and VR apps. \n​July 2019 - September 2019 ',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
           Center(
-              child: textCard(
-                  Colors.white,
-                  'Full-time at TNQ Ingage\n Junior Unity Developer\n February 2020 - May 2020 ',
-                  FontStyle.normal,
-                  FontWeight.bold,
-                  20)),
-          textCard(
-              Colors.white, 'Education', FontStyle.normal, FontWeight.bold, 20),
+              child: TextCard(
+                  color: Colors.white,
+                  text:
+                      'Full-time at TNQ Ingage\n Junior Unity Developer\n February 2020 - May 2020 ',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
+          TextCard(
+              color: Colors.white,
+              text: 'Education',
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
           Center(
-              child: textCard(
-                  Colors.white,
-                  'ICAT Design and Media College\n ​2017 - present\n B.Sc. Game Development',
-                  FontStyle.normal,
-                  FontWeight.bold,
-                  20)),
+              child: TextCard(
+                  color: Colors.white,
+                  text:
+                      'ICAT Design and Media College\n ​2017 - present\n B.Sc. Game Development',
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 20)),
         ],
       ),
-    );
-  }
-
-  Container textCard(Color color, String text, FontStyle fontStyle,
-      FontWeight fontWeight, double fontSize) {
-    return Container(
-      margin: const EdgeInsets.all(7.0),
-      padding: const EdgeInsets.all(7.0),
-      decoration: myBoxDecoration(color), //
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: fontSize,
-          fontStyle: fontStyle,
-          fontWeight: fontWeight,
-        ),
-      ),
-    );
-  }
-
-  BoxDecoration myBoxDecoration(Color color) {
-    return BoxDecoration(
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey[700],
-          blurRadius: 4.0,
-          spreadRadius: 1.0,
-        )
-      ],
-      color: color,
-      border: Border.symmetric(
-          vertical: BorderSide(width: 2), horizontal: BorderSide(width: 3)),
     );
   }
 }

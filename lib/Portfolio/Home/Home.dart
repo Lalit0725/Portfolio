@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/Portfolio/TextCard.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -15,28 +16,24 @@ class MyHome extends StatelessWidget {
           Center(
               child: Container(
             height: 250,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey[700],
-                  blurRadius: 4.0,
-                  spreadRadius: 1.0,
-                )
-              ],
-            ),
+            decoration: neumorphic(),
             padding: EdgeInsets.all(8.0),
             margin: EdgeInsets.all(8.0),
             child: Image(image: AssetImage('assets/images/Lalit.jpg')),
           )),
-          textCard(Colors.grey[100], 'Unity Dveloper', FontStyle.normal,
-              FontWeight.bold, 25),
-          textCard(
-              Colors.grey[100],
-              'I\'m Lalit, programmer. I love to play games, bringing it further I want to make games, wanna be an aspiring Game Developer.',
-              FontStyle.italic,
-              FontWeight.normal,
-              20),
+          TextCard(
+              color: Colors.grey[100],
+              text: 'Unity Dveloper',
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 25),
+          TextCard(
+              color: Colors.grey[100],
+              text:
+                  'I\'m Lalit, programmer. I love to play games, bringing it further I want to make games, wanna be an aspiring Game Developer.',
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.normal,
+              fontSize: 20),
           Container(
             child: Center(
               child: Wrap(
@@ -60,54 +57,44 @@ class MyHome extends StatelessWidget {
     );
   }
 
-  Container textCard(Color color, String text, FontStyle fontStyle,
-      FontWeight fontWeight, double fontSize) {
-    return Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.all(10.0),
-      decoration: myBoxDecoration(color), //
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: fontSize,
-          fontStyle: fontStyle,
-          fontWeight: fontWeight,
-        ),
+  BoxDecoration neumorphic() {
+  return BoxDecoration(
+    color: Colors.grey[300],
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey[500],
+        offset: Offset(5.0, 5.0),
+        blurRadius: 15.0,
+        spreadRadius: 1.0,
       ),
-    );
-  }
-
-  BoxDecoration myBoxDecoration(Color color) {
-    return BoxDecoration(
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey[700],
-          blurRadius: 4.0,
-          spreadRadius: 1.0,
-        )
-      ],
-      color: color,
-      border: Border.symmetric(
-          vertical: BorderSide(width: 2), horizontal: BorderSide(width: 3)),
-    );
-  }
+      BoxShadow(
+        color: Colors.white,
+        offset: Offset(-5.0, -5.0),
+        blurRadius: 15.0,
+        spreadRadius: 1.0,
+      ),
+    ],
+  );
+}
 
   Padding contactButtons({IconData icon, String name, Function function}) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: RaisedButton.icon(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18.0),
+        ),
         elevation: 5.0,
         onPressed: function,
-        color: Colors.grey[800],
+        color: Colors.white,
         icon: Icon(
           icon,
-          color: Colors.white,
+          color: Colors.black,
         ),
         label: Text(
           name,
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 18,
             fontStyle: FontStyle.italic,
           ),
